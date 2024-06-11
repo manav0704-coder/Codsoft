@@ -32,7 +32,7 @@ The Responsive Calculator is a simple yet efficient tool built using HTML, CSS, 
 - Easy to Use: Featuring large buttons and a clear display, the calculator offers a hassle-free experience for users to perform calculations quickly and efficiently.
 
 **live Demo**
-
+🔗https://simple-calculator-30.netlify.app/
 
 **Status:**  
 Completed
@@ -53,7 +53,7 @@ The Cars Landing Page is a visually stunning website designed to showcase variou
 - Interactive Elements: Users can explore various car models through interactive sliders, carousels, and navigation menus, allowing them to browse through different features, specifications, and pricing options effortlessly.
 
 **live Demo**
-
+🔗https://lx-car-landing.netlify.app/
 
 **Status:**  
 Completed
@@ -77,7 +77,7 @@ The Personal Portfolio Website is a showcase of my skills, projects, and experie
 - Contact Section: A contact section is included to facilitate communication with potential employers or clients. Visitors can easily reach out to me directly through the website to discuss job opportunities, collaborations, or inquiries.
 
 **live Demo**
-
+🔗https://manavs-portfolio.netlify.app/
 
 **Status:**  
 Completed
