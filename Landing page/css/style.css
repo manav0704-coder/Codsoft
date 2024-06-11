@@ -1,0 +1,1150 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+body,
+html,
+ul,
+li,
+a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* ---------------Header styles----------------- */
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.header-left,
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-left span,
+.header-right span {
+    margin-right: 20px;
+}
+
+.social-icons a {
+    margin-left: 10px;
+    color: white;
+}
+
+.phone {
+    color: #fff;
+}
+
+
+/* -------------Navbar styles------------------- */
+.navbar {
+    background: #fffefe;
+    padding: 10px 0px;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navbar-logo a {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 20px;
+}
+
+ul li a {
+    color: #000000;
+    font-size: 18px;
+    position: relative;
+    transition: 0.5s;
+    z-index: 3;
+}
+
+/*---------------- Hovering effect---------------- */
+ul li a:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 26px;
+    background: #ff5f5f;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0) rotateY(0deg) skew(10deg);
+    transition: 1.5s cubic-bezier(.43, 1.91, .35, .74);
+    z-index: -1;
+
+}
+
+ul li a:after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.1);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 1.5s cubic-bezier(.43, 1.91, .35, .74);
+    z-index: -1;
+    border-radius: 50%;
+}
+
+ul li:hover a:before {
+    transform: translate(-50%, -50%) scale(1.2) rotateY(360deg) skew(10deg);
+}
+
+ul li:hover a:after {
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+ul li:hover a {
+    color: #fff;
+    z-index: 3;
+}
+
+.navbar-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-icons .icon,
+.navbar-icons {
+    color: #000000;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    color: #000000;
+}
+
+.button {
+    width: 90px;
+    height: 30px;
+    border: 1px solid #ff5f5f;
+    text-align: center;
+    padding: 5px 10px;
+    color: #fff;
+    background-color: #ff5f5f;
+}
+
+.button:hover {
+    color: #fff;
+    background-color: #000000;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.close {
+    color: #fff;
+}
+
+
+
+/* --------------Sidebar seciton css-------------- */
+.container {
+    position: relative;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0px;
+    right: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: rgba(162, 155, 155, 0.499);
+    /* Semi-transparent background */
+    backdrop-filter: blur(8px);
+    /* Blur effect */
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+
+.sidebar.active {
+    right: 0;
+}
+
+
+.sidebar-content {
+    padding: 20px;
+    color: #fff;
+}
+
+.sidebar-content a {
+    display: block;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.closebtn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.sidebar.active .closebtn {
+    display: block;
+}
+
+
+
+
+/* -------------------hero section css start here-------------------------*/
+
+
+.slider {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    margin-top: 10px;
+}
+
+.slider .list .item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    inset: 0 0 0 0;
+}
+
+.slider .list .item img {
+    width: 100%;
+    height: 80%;
+
+
+}
+
+.slider .list .item .content {
+    position: absolute;
+    top: 10%;
+    width: 1140px;
+    max-width: 80%;
+    transform: translateX(-50%);
+    left: 44%;
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #000400;
+}
+
+.slider .list .item .content .title,
+.slider .list .item .content .type {
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+
+.slider .list .item .content .type {
+    color: #ff5f5f;
+}
+
+.slider .list .item .content .description {
+    font-size: 14px;
+}
+
+.slider .list .item .content .button-1 {
+    margin-top: 20px;
+
+}
+
+.slider .list .item .content .button-1 button {
+    border: none;
+    width: 90px;
+    background-color: #ff5f5f;
+    color: #fff;
+    padding: 5px 30px;
+    font-family: sans-serif;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: 0.4s;
+}
+
+.slider .list .item .content .button-1 button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+
+/* -------------------thumbnail section---------------- */
+
+.thumbnail {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+}
+
+.thumbnail .item {
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.thumbnail .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.nextprevarrow {
+    position: absolute;
+    top: 65%;
+    right: 75%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nextprevarrow button {
+    width: 50px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ff5f5f;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+
+.nextprevarrow button:hover {
+    background-color: #fff;
+    color: #000400;
+}
+
+
+/* -------------animaion part-------------------- */
+.slider .list .item:nth-child(1) {
+    z-index: 1;
+}
+
+.slider .list .item:nth-child(1) .content .title,
+.slider .list .item:nth-child(1) .content .type,
+.slider .list .item:nth-child(1) .content .description,
+.slider .list .item:nth-child(1) .content .button-1 {
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 1s linear 1 forwards;
+}
+
+@keyframes showContent {
+    to {
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+.slider .list .item:nth-child(1) .content .title {
+    animation-delay: 0.4s;
+}
+
+.slider .list .item:nth-child(1) .content .type {
+    animation-delay: 0.6s;
+}
+
+.slider .list .item:nth-child(1) .content .description {
+    animation-delay: 0.8s;
+}
+
+.slider .list .item:nth-child(1) .content .button-1 {
+    animation-delay: 1s;
+}
+
+.slider.next .list .item:nth-child(1) img {
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage 0.5s linear 1 forwards;
+}
+
+@keyframes showImage {
+    to {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+.slider.next .thumbnail .item:nth-last-child(1) {
+    overflow: hidden;
+    animation: showThumbnail 0.5s linear 1 forwards;
+}
+
+@keyframes showThumbnail {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+.slider.next .thumbnail {
+    animation: effectNext 0.5s linear 1 forwards;
+}
+
+@keyframes effectNext {
+    from {
+        transform: translateX(150px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slider.prev .list .item img {
+    z-index: 100;
+}
+
+.slider.prev .list .item:nth-child(2) {
+    z-index: 2;
+}
+
+.slider.prev .list .item:nth-child(2) img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: outFrame 0.5s linear 1 forwards;
+}
+
+@keyframes outFrame {
+    to {
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
+    }
+}
+
+.slider.prev .thumbnail .item:nth-child(1) {
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail 0.5s linear 1 forwards;
+}
+
+.slider.prev .list .item:nth-child(1) .content .title,
+.slider.prev .list .item:nth-child(1) .content .type,
+.slider.prev .list .item:nth-child(1) .content .description,
+.slider.prev .list .item:nth-child(1) .content .button-1 {
+    animation: contentOut 0.5s 1s linear 1 forwards;
+}
+
+@keyframes contentOut {
+    to {
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+
+
+/*------------------------------ service section css----------------------- */
+.headline-about {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.services {
+    text-align: center;
+    padding: 0 10px;
+    margin-top: 20px;
+}
+
+.services p {
+    margin-bottom: 40px;
+}
+
+.heading {
+    color: #ff5f5f;
+    font-size: 35px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.sub-head {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.containe-ser p {
+    font-size: 15px;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.service-card {
+    width: 250px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover {
+    color: #fff;
+    background-color: #ff5f5f;
+}
+
+/*------------------------------ dealer section here---------------------------  */
+
+.dealer-sec {
+    text-align: center;
+    margin: 20px;
+}
+
+.headline-dealer .heading {
+    margin-bottom: 10px;
+}
+
+.headline-dealer .sub-head {
+    margin-bottom: 20px;
+}
+
+.logo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(140, 139, 139, 0.1);
+}
+
+.logo {
+    flex: 1 1 calc(33.33% - 20px);
+    /* Three logos per row */
+    max-width: calc(20.33% - 20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+
+
+
+/*---------------------- cars features css here ---------------------- */
+
+.choose-us-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa;
+}
+
+.text {
+    flex: 1;
+    padding: 10px 20px;
+
+}
+
+.text h2 {
+    text-align: center;
+    margin-top: -50px;
+    padding: 10px;
+
+}
+
+.text ul li {
+    margin: 15px 100px;
+    text-align: left;
+    width: 83%;
+
+}
+
+.text p {
+    padding: 10px;
+    text-align: center;
+    width: 83%;
+    margin-left: 26px;
+}
+
+.about-us-btn {
+    width: 90px;
+    padding: 10px;
+    background-color: #ff5f5f;
+}
+
+.about-us-btn:hover {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.about-us {
+    padding: 10px 100px;
+}
+
+.fa-square-check {
+    color: #ff5f5f;
+}
+
+.image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+
+
+/*------------------------ cars album section here ----------------------------- */
+
+
+.card-content button:hover {
+    background-color: #0056b3;
+}
+
+.cars-sec {
+    padding: 20px;
+    text-align: center;
+}
+
+.headline-car .heading {
+    margin-bottom: 10px;
+}
+
+.headline-car .sub-head {
+    margin-bottom: 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    flex: 1 1 calc(25% - 20px);
+    /* Four cards per row */
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-width: calc(25% - 20px);
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content p {
+    margin-bottom: 40px;
+}
+
+.card-content button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+.card-content button.sale-btn {
+    background-color: #28a745;
+}
+
+.card-content button:hover {
+    opacity: 0.8;
+}
+
+
+
+
+
+/* --------------------- footer section code here -----------------------*/
+
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.contact-details span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.footer-section {
+    flex: 1 1 calc(20% - 18px);
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-section h6 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #bbb;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+    color: #bbb;
+}
+
+.footer-link {
+    color: #bbb;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: #fff;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    padding: 0;
+}
+
+.social-icons li {
+    margin-right: 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+.brand-columns {
+    display: flex;
+
+    gap: 20px;
+}
+
+.brand-columns ul {
+    padding: 0;
+    list-style: none;
+}
+
+.copyright {
+    text-align: center;
+    color: #bbb;
+    font-size: 1rem;
+
+}
+
+.footer-icon {
+    color: #ff5f5f;
+}
+
+.about-us span a {
+    color: #bbb;
+}
+
+
+
+
+/* -------------Navbar styles------------------- */
+
+
+@media screen and (max-width: 767px) {
+    .navbar-container {
+        flex-direction: row-reverse;
+        /* Reverse order for menu icon */
+        justify-content: space-between;
+        /* Space out elements */
+        align-items: center;
+        padding: 0 15px;
+        /* Add padding */
+    }
+
+    .navbar-menu {
+        display: none;
+        /* Hide menu items by default */
+        flex-direction: column;
+        /* Stack menu items vertically */
+        width: 100%;
+        /* Take up full width */
+    }
+
+    .fa-car {
+        color: #ff5f5f;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+        /* Show menu items when active */
+    }
+
+    .menu-icon {
+        display: block;
+        /* Show menu icon */
+    }
+
+    .header {
+        display: none;
+    }
+
+    .closebtn {
+        margin-right: 23px;
+        position: fixed;
+    }
+
+    .sidebar-content a {
+        margin-top: 38px;
+        text-align: center;
+        width: 134px;
+        padding: 8px;
+        background-color: #ff5f5f;
+    }
+
+    .sidebar.active {
+        right: 0;
+    }
+
+    .slider-sec .headline {
+        display: flex;
+    }
+
+    .slider .list .item img {
+        width: 100%;
+        height: 60%;
+        object-fit: contain;
+    }
+
+
+}
+
+/* -------------------hero section css start here-------------------------*/
+
+
+@media screen and (max-width: 667px) {
+    .slider .list .item .content .title {
+        font-size: 1.5em;
+    }
+
+    .slider .list .item .content .button {
+        margin-top: 5px;
+        /* Adjusted margin for smaller screens */
+    }
+
+    .slider .list .item .content .type {
+        font-size: 1em;
+    }
+
+    .slider .list .item .content .description {
+        font-size: 0.8em;
+    }
+
+    .thumbnail {
+        gap: 10px;
+        bottom: 35%;
+    }
+
+    .thumbnail .item {
+        width: 75px;
+        height: 100px;
+    }
+
+    .nextprevarrow {
+        top: 67%;
+        right: 60%;
+        width: 200px;
+    }
+
+    .nextprevarrow button {
+        width: 30px;
+        height: 30px;
+    }
+
+    .content-btn {
+        width: 65px;
+        height: 20px;
+    }
+
+    .btn-ctn {
+        width: 84px;
+        font-size: 10px;
+        height: 34px;
+    }
+
+    .slider .list .item .content {
+        padding-right: 0;
+        top: 7%;
+    }
+
+    .slider .list .item .content .title {
+        font-size: 30px;
+    }
+}
+
+
+@media screen and (max-width:480px) {
+    .slider .list .item .content .title {
+        font-size: 2em
+    }
+
+    .slider .list .item .content .type {
+        font-size: 1.5em;
+    }
+
+    .slider .list .item .content .description {
+        font-size: 0.9em;
+    }
+
+    .thumbnail .item {
+        width: 60px;
+        height: 80px;
+    }
+
+    .nextprevarrow {
+        top: 48%;
+        right: 60%;
+        width: 200px;
+    }
+
+    .nextprevarrow button {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+
+/*------------------------------ service section css----------------------- */
+
+@media (max-width: 667px) {
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .services {
+        margin-top: -140px;
+    }
+
+    .service-card {
+        margin-bottom: 29px;
+        width: 80%;
+    }
+}
+
+/*------------------------------ dealer section here---------------------------  */
+
+@media (max-width: 1024px) {
+    .logo {
+        flex: 1 1 calc(50% - 20px);
+        /* Two logos per row */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        flex: 1 1 100%;
+        /* One logo per row */
+        max-width: 100%;
+    }
+}
+
+
+/*---------------------- cars features css here ---------------------- */
+@media (max-width: 768px) {
+    .choose-us-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text {
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+
+    .image {
+        display: flex;
+        justify-content: center;
+    }
+
+    .text h2 {
+        margin-top: 5px;
+    }
+
+    .text ul li {
+        margin: 0px 40px;
+        text-align: left;
+        width: 85%;
+    }
+
+    .image img {
+        width: 95%;
+    }
+}
+
+
+/*------------------------ cars album section here ----------------------------- */
+
+@media (max-width: 1024px) {
+    .card {
+        flex: 1 1 calc(50% - 20px);
+        /* Two cards per row */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 100%;
+        /* One card per row */
+        max-width: 100%;
+    }
+}
+
+
+/* --------------------- footer section code here -----------------------*/
+@media (max-width: 768px) {
+    .contact-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: left;
+    }
+
+    .footer-section {
+        flex: 1 1 100%;
+        max-width: 100%;
+        text-align: justify;
+    }
+
+    .about-us {
+        padding: 0;
+    }
+
+}

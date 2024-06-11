@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My portfolio</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- bootstrap link cdn  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Aos cdn link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="portfolio container"></div>
+    <!-- navigation bar start -->
+    <nav>
+        <div class="logo">
+            <span>&lt;/&gt; Manav's portfolio</span>
+        </div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#skills">Skill</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <div class="overlay" id="overlay"></div>
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" id="close-btn">&times;</button>
+        <div class="sidebar-content">
+            <a href="#home">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#skills">Skill</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact Us</a>
+            <a href="./images/Resume (2).pdf" download class="resume-link">Resume</a>
+        </div>
+    </div>
+    <!-- navbar end -->
+
+
+    <!-- hero section start -->
+    <section class="text-gray-600 body-font hero  bg-body-tertiary" id="home">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+            <div
+                class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Hi, I am Manav Pardeshi
+                    <br class="hidden lg:inline-block">A Passionate<br>
+                    <span id="element"></span>
+                </h1>
+                <p class="resume text-center mb-4">Download CV</p>
+                <div class="flex justify-center text-center resumebtn">
+                    <button class="inline-flex text-white  border-0 py-2 px-6 focus:outline-none  rounded text-lg "><a
+                            href="./images/Resume (2).pdf" download>Resume</a></button>
+                </div>
+            </div>
+
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                <img class="object-cover object-center rounded" alt="hero" src="./images/hero.png">
+            </div>
+        </div>
+    </section>
+    <!-- hero section end -->
+
+
+
+    <!-- about section start -->
+    <section>
+        <div class="main">
+            <div class="about-container">
+                <span class="about" id="about">About Me</span>
+                <span class="underline"></span>
+            </div>
+        </div>
+        <div data-aos="flip-left" class="container my-5">
+            <div class="p-5 text-center bg-body-tertiary rounded-3">
+                <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px"
+                    fill="#5f6368">
+                    <path
+                        d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z" />
+                </svg>
+                <h1 class="text-body-emphasis tagline">Tech Enthusiast | Passionately Crafting Digital Experiences</h1>
+                <p class="col-lg-8 mx-auto fs-5 text-muted">
+                    I'm Manav Rajesh Pardeshi, a student of Business Administration with a focus on Computer
+                    Applications. My journey into tech began in 2022, and since then, I've mastered HTML, CSS,
+                    JavaScript for frontend, and Node.js with MySQL for backend. I attended Kendriya Vidyalaya for
+                    schooling and Ness Wadia College of Commerce for higher education.
+                </p>
+
+            </div>
+        </div>
+    </section>
+    <!-- about section ends  -->
+
+
+
+    <!-- Skills section -->
+    <section class="text-gray-600" id="skills">
+        <div class="main">
+            <div class="skill-container">
+                <span class="skill-line">Skills</span>
+                <span class="underline-skill"></span>
+            </div>
+        </div>
+        <div class="subhead">
+            <h1>1. Tech stack</h1>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="tech-stack">
+                        <div class="col-md-4 tech-card" data-aos="zoom-in">
+                            <img src="./images/html-5.png" alt="HTML">
+                            <h3>HTML</h3>
+                        </div>
+                        <div class="col-md-4 tech-card text-1" data-aos="zoom-in">
+                            <img src="./images/css-3.png" alt="CSS">
+                            <h3>CSS</h3>
+                        </div>
+                        <div class="col-md-4 tech-card text-1" data-aos="zoom-in">
+                            <img src="./images/js.png" alt="JavaScript">
+                            <h3>JS</h3>
+                        </div>
+                        <div class="col-md-4 tech-card" data-aos="zoom-in">
+                            <img src="./images/node.png" alt="JavaScript">
+                            <h3>NodeJs</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="subhead">
+            <h1>2.Tools</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="tech-stack">
+                        <div class="col-md-4 tech-card" data-aos="zoom-in-left">
+                            <img src="./images/vscode.png" alt="VS code">
+                            <h3>VS code</h3>
+                        </div>
+                        <div class="col-md-4 tech-card" data-aos="zoom-in-right">
+                            <img src="./images/git.png" alt="CSS">
+                            <h3>Git</h3>
+                        </div>
+                        <div class="col-md-4 tech-card" data-aos="zoom-out">
+                            <img src="./images/github.png" alt="JavaScript">
+                            <h3>Github</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills section end-->
+
+
+    
+    <!-- project section start -->
+    <section class="text-gray-600" id="projects">
+        <div class="main">
+            <div class="skill-container">
+                <span class="skill-line">My Projects</span>
+                <span class="underline-skill"></span>
+            </div>
+        </div>
+        <div class="subhead">
+            <h1>Html/CSS</h1>
+        </div>
+        <div class="project-cards container mt-5">
+            <div class="html-project mt-4 d-flex flex-wrap justify-content-center main-card">
+                <div class="cards" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                    <div class="card-img">
+                        <img class="img-fluid" src="./images/Suprema - Multipurpose eCommerce Theme.jpg" height="100px"
+                            alt="Bakery template Home Image">
+                    </div>
+                    <hr class="card-margin">
+                    <div class="card-content">
+                        <h4>E-commerce</h4>
+                        <ul class="mb-0 px-3">
+                            <li>Created a dynamic e-commerce website featuring a wide range of products.</li>
+                            <li>Implemented an intuitive add-to-cart functionality to enhance user experience.And
+                                variety of products.</li>
+                            <li>Designed a responsive layout to ensure seamless shopping across devices.</li>
+                            <span class="d-block pt-3"><span class="fw-bold">Tech Stack:</span> HTML, CSS,
+                                JavaScript</span>
+                        </ul>
+                        <div class="btns">
+                            <a href="https://github.com/manav0704-coder/Project-on-e-commerce-website">Source
+                                Code</a>
+                            <a href="https://swadeshi-e-commerce.netlify.app">Preview</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                    <div class="card-img">
+                        <img class="img-fluid" src="./images/creatink-photo-website-template.jpg" height="100px"
+                            alt="Bakery template Home Image">
+                    </div>
+                    <hr class="card-margin">
+                    <div class="card-content">
+                        <h4>Photography</h4>
+                        <ul class="mb-0 px-3">
+                            <li>Developed a fully responsive photography website using HTML, CSS, and JavaScript.</li>
+                            <li>Implemented interactive features such as image sliders, galleries, and lightboxes.</li>
+                            <li>Optimized for both desktop and mobile devices to ensure a seamless user experience.</li>
+                            <span class="d-block pt-3"><span class="fw-bold">Tech Stack:</span> HTML, CSS,
+                                JavaScript</span>
+                        </ul>
+                        <div class="btns">
+                            <a href="https://github.com/manav0704-coder/photography.git">Source
+                                Code</a>
+                            <a href="https://kd-photography.netlify.app/">Preview</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                    <div class="card-img">
+                        <img class="img-fluid" src="./images/car-landing.jpeg" height="100px"
+                            alt="Bakery template Home Image">
+                    </div>
+                    <hr class="card-margin">
+                    <div class="card-content">
+                        <h4>luxury cars</h4>
+                        <ul class="mb-0 px-3">
+                            <li>Creating a sleek landing page for luxury cars, ensuring seamless viewing across devices.</li>
+                            <li>Implemented responsive design principles to deliver an exceptional user experience</li>
+                            <li>enabling effortless navigation on desktops, tablets, and smartphones.</li>
+                            <span class="d-block pt-3"><span class="fw-bold">Tech Stack:</span> HTML, CSS
+                            </span>
+                        </ul>
+                        <div class="btns">
+                            <a href="https://github.com/manav0704-coder/luxury-cars-landing-page">Source Code</a>
+                            <a href="https://lx-car-landing.netlify.app/">Preview</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- project section end -->
+
+
+
+    <!-- contact section start -->
+
+    <section class="contact mt-5" id="contact">
+        <div class="main">
+            <div class="skill-container">
+                <span class="skill-line">Contact</span>
+                <span class="underline-skill"></span>
+            </div>
+        </div>
+        <section class="text-gray-600 contact-sec">
+            <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center contact">
+                <form class="form">
+                    <h2><i class="fa-solid fa-square-envelope"></i>manavpardeshi5@gmail.com</h2>
+                    <h2><i class="fa-solid fa-phone"></i>9356013449</h2>
+                    <h2><i class="fa-brands fa-github"></i>manav0704-coder</h2>
+                </form>
+                <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                    <img class="object-cover object-center rounded" alt="hero" src="./images/contact-me.png">
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- contact section end -->
+
+    <!-- footer section start  -->
+    <footer class="footer mt-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <h5>About Me</h5>
+                    <p>I'm Manav Rajesh Pardeshi, a student of Business Administration with a focus on Computer
+                        Applications. My journey into tech began in 2022, and since then, I've mastered HTML, CSS,
+                        JavaScript for frontend, and Node.js with MySQL for backend. I attended Kendriya Vidyalaya for
+                        schooling and Ness Wadia College of Commerce for higher education.</p>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li>Email: <a href="mailto:youremail@example.com">manavpardeshi5@gmail.com</a></li>
+                        <li>LinkedIn: <a
+                                href="https://www.linkedin.com/in/manav-pardeshi-he-him-455702236?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                target="_blank">Manav Pardeshi</a></li>
+                        <li>GitHub: <a href="https://github.com/manav0704-coder" target="_blank">manav0704-coder</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <p class="mb-0">&copy; 2024 Manav Pardeshi. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section end  -->
+
+
+    </div>
+</body>
+<!-- tailwind css cdn -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- custome script here -->
+<script src="./js/main.js"></script>
+
+<!-- bootstrap script here -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+<!-- web3from link here -->
+<script src="https://web3forms.com/client/script.js" async defer></script>
+
+
+<!-- AOS script here  -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- typed.js script here -->
+<script>
+    var typed = new Typed('#element', {
+        strings: ['Web Developer', 'UI Designer', 'Freelancer'],
+        typeSpeed: 80,
+    });
+</script>
+
+
+<script>
+    // animation js     
+
+    AOS.init();
+
+    // You can also pass an optional settings object
+    // below listed default settings
+    AOS.init({
+        // Global settings:
+        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+        startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+        initClassName: 'aos-init', // class applied after initialization
+        animatedClassName: 'aos-animate', // class applied on animation
+        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 20, // offset (in px) from the original trigger point
+        delay: 0.6, // values from 0 to 3000, with step 50ms
+        duration: 1000, // values from 0 to 3000, with step 50ms
+        easing: 'ease', // default easing for AOS animations
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+    });
+</script>
+
+</html>
